@@ -1,1 +1,9 @@
 Flask==2.0.2
+Flask-MySQLdb==0.2.0
+Jinja2==3.0.2
+mysql==0.0.3
+mysql-connector==2.2.9
+mysql-connector-python==8.0.27
+mysqlclient==2.0.3
+urllib3==1.26.7
+Werkzeug==2.0.2
