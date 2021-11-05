@@ -1,6 +1,10 @@
 class Myconfig(object):
-    from app import app
-    app.config['MYSQL_HOST'] = 'localhost'
-    app.config['MYSQL_USER'] = 'root'
-    app.config['MYSQL_PASSWORD'] = ''
-    app.config['MYSQL_DB'] = 'my_db'
+
+    # My db configuration
+    MYSQL_HOST = 'localhost'
+    MYSQL_USER = 'root'
+    MYSQL_PASSWORD = ''
+    MYSQL_DB = 'my_db'
+
+    # Do not use such as a secret key
+    SECRET_KEY = 'yeeeeeeeees'

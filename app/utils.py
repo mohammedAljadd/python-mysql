@@ -1,7 +1,7 @@
 def db(mysql, email, password):
 
     cursor = mysql.connection.cursor()
-    #cursor.execute(''' TRUNCATE user; ''')
+    #cursor.execute(''' TRUNCATE user; ''') to empty the table
     
 
     cursor.execute("SELECT COUNT(email) FROM `user`")

@@ -1,5 +1,5 @@
 from app import app, mysql
-from flask import render_template, request, redirect
+from flask import render_template, request, redirect, url_for, session
 from app.utils import *
 
 
@@ -20,6 +20,14 @@ def user_db():
         email = req.get("email")
         password = request.form["password"]
         db(mysql, email, password)
-        
+        session['email'] = email
 
-    return redirect("/home")
+    return redirect(url_for('user_home', messages=email))
+   
+@app.route("/user-home")
+def user_home():
+    email = session.get('email', None)
+    return render_template(
+        "user.html", 
+        email=email
+        )
